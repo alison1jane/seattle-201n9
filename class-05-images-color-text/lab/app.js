@@ -57,13 +57,14 @@ function sumAndMultiply(a,b,c) { //eslint-disable-line
   console.log(sum1[0]);
   var sum2 = sum(sum1[0], c);
   console.log(sum2[0, 1]);
-  var message1 = 'The sum of ' + a + ' and ' + b + ' and ' + c + ' is ' + sum2 + '.';
-  var multiply1 = multiply(a,b,c);
-  console.log(multiply1[0]);
-  var multiply2 = sum(multiply1[0], c);
+  var message1 = 'The sum of ' + a + ' and ' + b + ' and ' + c + ' is ' + sum2[0] + '.';
+
+  var multiply1 = multiply(a,b);
+  console.log(multiply1);
+  var multiply2 = multiply(multiply1[0], c);
   console.log(multiply2[0, 1]);
   var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply1 + '.';
-  return [sum, message1, multiply, message2];
+  return [sum2[0], message1, multiply, message2];
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
